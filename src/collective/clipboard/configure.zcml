@@ -1,0 +1,23 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="collective.clipboard">
+
+  <five:registerPackage package="." initialize=".initialize" />
+
+  <includeDependencies package="." />
+
+  <include package=".browser" />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="collective.clipboard"
+      directory="profiles/default"
+      description="Installs the collective.clipboard package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+  <!-- -*- extra stuff goes here -*- -->
+
+</configure>

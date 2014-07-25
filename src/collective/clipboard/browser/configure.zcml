@@ -1,0 +1,35 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="collective.clipboard">
+
+  <browser:view
+      for="*"
+      name="add_to_clipboard"
+      class=".addtoclipboard.AddToClipboard"
+      permission="zope2.View"
+  />
+
+  <browser:view
+      for="*"
+      name="clipboard_copy"
+      class=".actions.ClipboardCopy"
+      permission="zope2.View"
+  />
+
+  <browser:page
+      for="*"
+      class=".clipboardcontents.ClipboardContentsView"
+      name="clipboard_contents"
+      template="clipboard_contents.pt"
+      permission="zope2.Public" />
+
+  <browser:viewlet
+    name="collective.clipboard.listing"
+    manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+    class=".viewlets.ListingViewlet"
+    permission="zope2.View"
+    />
+
+
+</configure>

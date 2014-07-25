@@ -1,0 +1,4 @@
+<div tal:define="clipboard view/get_clipboard">
+    Cipboard items: <tal:block tal:content="clipboard"/>
+</div>    
+

@@ -1,0 +1,1 @@
+CLIPBOARD_SESSION_ID = '_collective_clipboard'
