@@ -35,3 +35,22 @@ def add_to_clipboard(obj):
         clipboard.append(uuid)
         session.set(CLIPBOARD_SESSION_ID, clipboard)
 
+def delete_from_clipboard(obj=None, path=None):
+    if not (obj or path):
+        return
+    sdm = api.portal.get_tool('session_data_manager')
+    session = sdm.getSessionData(create=True)
+    clipboard = session.get(CLIPBOARD_SESSION_ID, [])
+    if path:
+        brains = api.portal.get_tool('portal_catalog')(path=path)
+        if brains:
+            uuid = brains[0].UID
+    elif isinstance(obj, str):
+        uuid = obj
+    else:
+        uuid = api.content.get_uuid(obj=obj)
+    if uuid and uuid in clipboard:
+        clipboard.remove(uuid)
+        session.set(CLIPBOARD_SESSION_ID, clipboard)
+
+

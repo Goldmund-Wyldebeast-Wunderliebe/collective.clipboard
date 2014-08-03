@@ -17,6 +17,13 @@
       permission="zope2.View"
   />
 
+  <browser:view
+      for="*"
+      name="clipboard_delete"
+      class=".actions.ClipboardDelete"
+      permission="zope2.View"
+  />
+
   <browser:page
       for="*"
       class=".clipboardcontents.ClipboardContentsView"

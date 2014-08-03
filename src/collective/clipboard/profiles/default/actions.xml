@@ -14,10 +14,20 @@
     </object>
     <object name="clipboard_buttons" meta_type="CMF Action Category">
         <property name="title">Clipboard actions</property>
-        <object name="copy" meta_type="CMF Action" i18n:domain="plone">
+        <object name="copy" meta_type="CMF Action" i18n:domain="collective.clipboard">
             <property name="title" i18n:translate="">Copy</property>
             <property name="description" i18n:translate=""></property>
             <property name="url_expr">string:clipboard_copy:method</property>
+            <property name="available_expr"></property>
+            <property name="permissions">
+                <element value="View"/>
+            </property>
+            <property name="visible">True</property>
+        </object>
+        <object name="delete" meta_type="CMF Action" i18n:domain="collective.clipboard">
+            <property name="title" i18n:translate="">Delete</property>
+            <property name="description" i18n:translate=""></property>
+            <property name="url_expr">string:clipboard_delete:method</property>
             <property name="available_expr"></property>
             <property name="permissions">
                 <element value="View"/>
