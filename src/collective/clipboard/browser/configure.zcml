@@ -7,21 +7,21 @@
       for="*"
       name="add_to_clipboard"
       class=".addtoclipboard.AddToClipboard"
-      permission="zope2.View"
+      permission="zope2.Public"
   />
 
   <browser:view
       for="*"
       name="clipboard_copy"
       class=".actions.ClipboardCopy"
-      permission="zope2.View"
+      permission="zope2.Public"
   />
 
   <browser:view
       for="*"
       name="clipboard_delete"
       class=".actions.ClipboardDelete"
-      permission="zope2.View"
+      permission="zope2.Public"
   />
 
   <browser:page
@@ -31,12 +31,13 @@
       template="clipboard_contents.pt"
       permission="zope2.Public" />
 
-  <browser:viewlet
+  <!--Disabled by default. It is more for debugging right now.-->
+  <!--browser:viewlet
     name="collective.clipboard.listing"
     manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
     class=".viewlets.ListingViewlet"
-    permission="zope2.View"
-    />
+    permission="zope2.Public"
+    /-->
 
 
 </configure>
