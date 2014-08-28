@@ -39,5 +39,12 @@
     permission="zope2.Public"
     /-->
 
+    <browser:page
+         for="*"
+         class=".clipboardcontents.ClipboardContentsBrowserView"
+         attribute="update_table"
+         name="clipboardcontents_get_table"
+         permission="zope2.Public" />
+
 
 </configure>

@@ -16,7 +16,7 @@
       </metal:block>
       <metal:js fill-slot="javascript_head_slot">
           <script type="text/javascript"
-                  tal:attributes="src string:${portal_url}/++resource++folder_contents.js">
+                  tal:attributes="src string:${portal_url}/++resource++clipboard_contents.js">
           </script>
       </metal:js>
   </head>
@@ -78,11 +78,11 @@
               Up one level
           </a>
 
-          <form name="folderContentsForm"
+          <form name="clipboardContentsForm"
                 method="post"
                 action="folder_object"
                 tal:attributes="action context/absolute_url"
-                class="kssattr-serveraction-foldercontents_update_table">
+                class="kssattr-serveraction-clipboardcontents_update_table">
             <div tal:replace="structure view/contents_table"></div>
             <input tal:replace="structure context/@@authenticator/authenticator" />
           </form>

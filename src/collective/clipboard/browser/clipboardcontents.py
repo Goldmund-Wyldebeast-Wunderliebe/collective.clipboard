@@ -19,7 +19,8 @@ from Products.CMFPlone.utils import pretty_title_or_id, isExpired
 
 from plone.app.content.browser.interfaces import IFolderContentsView
 from plone.app.content.browser.interfaces import IContentsPage
-from plone.app.content.browser.tableview import Table, TableBrowserView
+from plone.app.content.browser.tableview import TableBrowserView
+from tableview import ClipboardTable
 
 
 
@@ -32,6 +33,16 @@ class ClipboardContentsView(FolderContentsView):
         return table.render()
 
 class ClipboardContentsTable(FolderContentsTable):
+
+    def __init__(self, context, request, contentFilter=None):
+        super(ClipboardContentsTable, self).__init__(context, request, contentFilter=None)
+        url = context.absolute_url()
+        view_url = url + '/@@clipboard_contents'
+        self.table = ClipboardTable(request, url, view_url, self.items,
+                           show_sort_column=self.show_sort_column,
+                           buttons=self.buttons)
+
+
 
     def folderitems(self):
         """
@@ -49,8 +60,6 @@ class ClipboardContentsTable(FolderContentsTable):
         use_view_action = site_properties.getProperty(
             'typesUseViewActionInListings', ())
         browser_default = plone_utils.browserDefault(context)
-
-        contentsMethod = self.contentsMethod()
 
         show_all = self.request.get('show_all', '').lower() == 'true'
         pagesize = 20
@@ -163,3 +172,6 @@ class ClipboardContentsTable(FolderContentsTable):
             if button['id'] != 'paste' or context.cb_dataValid():
                 buttons.append(self.setbuttonclass(button))
         return buttons
+
+class ClipboardContentsBrowserView(TableBrowserView):
+    table = ClipboardContentsTable
