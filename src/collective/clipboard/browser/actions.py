@@ -36,5 +36,5 @@ class ClipboardDelete(BrowserView):
         paths = request.get('paths', [])
         brains = api.portal.get_tool('portal_catalog')(path={'query':paths, 'depth':0})
         for brain in brains:
-            delete_from_clipboard(path=brain.getPath())
+            delete_from_clipboard(path={'query':brain.getPath(), 'depth':0})
         request.response.redirect(request.get('HTTP_REFERER'))        
