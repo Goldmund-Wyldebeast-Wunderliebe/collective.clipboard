@@ -39,6 +39,7 @@ setup(name='collective.clipboard',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
+          'setuptools',
           'plone.api',
       ],
       extras_require={'test': ['plone.app.testing[robot]>=4.2.2']},
