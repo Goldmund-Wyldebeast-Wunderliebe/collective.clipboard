@@ -25,7 +25,7 @@
             <property name="visible">True</property>
         </object>
         <object name="delete" meta_type="CMF Action" i18n:domain="collective.clipboard">
-            <property name="title" i18n:translate="">Delete</property>
+            <property name="title" i18n:translate="">Delete from clipboard</property>
             <property name="description" i18n:translate=""></property>
             <property name="url_expr">string:clipboard_delete:method</property>
             <property name="available_expr"></property>
@@ -37,7 +37,7 @@
     </object>
     <object name="user" meta_type="CMF Action Category">
         <object name="clipboard_contents" meta_type="CMF Action" i18n:domain="collective.clipboard">
-            <property name="title">Clipboard contents</property>
+            <property name="title" i18n:translate="">Clipboard contents</property>
             <property name="description"></property>
             <property
                     name="url_expr">
