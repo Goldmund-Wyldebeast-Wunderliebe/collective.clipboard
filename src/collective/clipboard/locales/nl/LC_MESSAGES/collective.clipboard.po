@@ -24,7 +24,7 @@ msgstr "Prikker inhoud"
 
 #: ./profiles/default/actions.xml
 msgid "Copy"
-msgstr ""
+msgstr "Kopiëren"
 
 #: ./profiles/default/actions.xml
 msgid "Delete from clipboard"
