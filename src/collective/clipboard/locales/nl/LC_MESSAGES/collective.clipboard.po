@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-09-05 07:53+0000\n"
+"POT-Creation-Date: 2014-09-08 12:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,7 +28,7 @@ msgstr ""
 
 #: ./profiles/default/actions.xml
 msgid "Delete from clipboard"
-msgstr "Verwijder uit prikker"
+msgstr "Verwijder van prikker"
 
 #: ./browser/addtoclipboard.py:12
 msgid "Item added to the clipboard"
