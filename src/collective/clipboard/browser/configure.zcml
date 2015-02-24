@@ -5,6 +5,13 @@
 
   <browser:view
       for="*"
+      name="folder_add_to_clipboard"
+      class=".folderaddtoclipboard.AddToClipboard"
+      permission="zope2.Public"
+  />
+
+  <browser:view
+      for="*"
       name="add_to_clipboard"
       class=".addtoclipboard.AddToClipboard"
       permission="zope2.Public"

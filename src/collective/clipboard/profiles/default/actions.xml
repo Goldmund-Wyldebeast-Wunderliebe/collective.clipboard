@@ -50,4 +50,19 @@
             <property name="visible">True</property>
         </object>
     </object>
+    <object name="folder_buttons" meta_type="CMF Action Category">
+        <object name="folder_add_to_clipboard" meta_type="CMF Action" i18n:domain="collective.clipboard">
+            <property name="title" i18n:translate="">Add to clipboard</property>
+            <property name="description"></property>
+            <property
+                    name="url_expr">
+                string:folder_add_to_clipboard:method
+            </property>
+            <property name="link_target"></property>
+            <property name="icon_expr"></property>
+            <property name="available_expr"></property>
+            <property name="permissions"/>
+            <property name="visible">True</property>
+        </object>
+    </object>
 </object>
