@@ -61,7 +61,9 @@
             <property name="link_target"></property>
             <property name="icon_expr"></property>
             <property name="available_expr"></property>
-            <property name="permissions"/>
+            <property name="permissions">
+                <element value="View"/>
+            </property>
             <property name="visible">True</property>
         </object>
     </object>
